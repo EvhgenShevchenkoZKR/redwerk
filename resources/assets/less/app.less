@@ -255,19 +255,33 @@ body {
     margin: 0;
     .checkbox-label {
       margin-left: 15px;
-      vertical-align: middle;
+      vertical-align: bottom;
       a {
         color: inherit;
       }
     }
+    .checkbox-label.remeber-label {
+      vertical-align: text-top;
+    }
     .checkbox-label.error-item {
       border-bottom: 1px solid @red;
     }
+    .cb-top {
+      margin-bottom: 6px;
+    }
+    .cb-wrapper {
+      color: #808080;
+      font-size: 13px;
+      font-weight: 600;
+    }
   }
+
+
 
   .subscribe-radio {
     margin-top: 20px;
     .rb-label {
+      cursor: default;
       padding-right: 15px;
     }
     label {

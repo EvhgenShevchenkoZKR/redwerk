@@ -39,14 +39,14 @@
                         </div>
 
                         <div class="form-group text-center checkbox-wrapper">
-                            <label>
+                            <div class="cb-wrapper">
                                 {!! Form::hidden('callback', 0) !!}
                                 <span class="checkboxRed">
                                 {!! Form::checkbox('remember', 1, old('remember'), ['class' => 'checkbox-inline', 'id' => 'remember']) !!}
                                     <label for="remember"></label>
                                 </span>
-                                <span class="checkbox-label">Remember Me</span>
-                            </label>
+                                <span class="checkbox-label remeber-label">Remember Me</span>
+                            </div>
                         </div>
 
                         <div class="form-group">

@@ -253,15 +253,29 @@ body {
 .form-horizontal .checkbox-wrapper .checkbox-label,
 .front-form-wrapper .checkbox-wrapper .checkbox-label {
   margin-left: 15px;
-  vertical-align: middle;
+  vertical-align: bottom;
 }
 .form-horizontal .checkbox-wrapper .checkbox-label a,
 .front-form-wrapper .checkbox-wrapper .checkbox-label a {
   color: inherit;
 }
+.form-horizontal .checkbox-wrapper .checkbox-label.remeber-label,
+.front-form-wrapper .checkbox-wrapper .checkbox-label.remeber-label {
+  vertical-align: text-top;
+}
 .form-horizontal .checkbox-wrapper .checkbox-label.error-item,
 .front-form-wrapper .checkbox-wrapper .checkbox-label.error-item {
   border-bottom: 1px solid #dd3331;
+}
+.form-horizontal .checkbox-wrapper .cb-top,
+.front-form-wrapper .checkbox-wrapper .cb-top {
+  margin-bottom: 6px;
+}
+.form-horizontal .checkbox-wrapper .cb-wrapper,
+.front-form-wrapper .checkbox-wrapper .cb-wrapper {
+  color: #808080;
+  font-size: 13px;
+  font-weight: 600;
 }
 .form-horizontal .subscribe-radio,
 .front-form-wrapper .subscribe-radio {
@@ -269,6 +283,7 @@ body {
 }
 .form-horizontal .subscribe-radio .rb-label,
 .front-form-wrapper .subscribe-radio .rb-label {
+  cursor: default;
   padding-right: 15px;
 }
 .form-horizontal .subscribe-radio label,

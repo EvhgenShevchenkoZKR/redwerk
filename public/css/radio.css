@@ -1,6 +1,6 @@
 /* .checkboxRed */
 .checkboxRed {
-    width: 18px;
+    width: 25px;
     position: relative;
     margin: 18px auto;
 }
@@ -20,7 +20,7 @@
     height: 5px;
     position: absolute;
     top: 6px;
-    left: 4px;
+    left: 5px;
     border: 3px solid white;
     border-top: none;
     border-right: none;
@@ -38,6 +38,7 @@
 }
 .checkboxRed input[type=checkbox] {
     visibility: hidden;
+    margin: 1px;
 }
 .checkboxRed input[type=checkbox]:checked + label:after {
     opacity: 1;

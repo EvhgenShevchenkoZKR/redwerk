@@ -40,29 +40,30 @@
                 </div>
 
                 <div class="form-group checkbox-wrapper col-md-7">
-                    <label>
+                    <div class="cb-top cb-wrapper">
                         <span class="checkboxRed">
                         {!! Form::checkbox('agree', 1, old('agree'), ['class' => 'checkbox-inline', 'id' => 'agreeCh']) !!}
                         <label for="agreeCh"></label>
                         </span>
                         @if ($errors->has('agree')) @php $extra = 'error-item'; @endphp @else @php $extra = ''; @endphp @endif
                         <span class="checkbox-label {{$extra}}">I agree to the <a target="_blank" href="/terms">terms of use and privacy policy</a></span>
-                    </label>
-                    <label>
+                    </div>
+                    <div class="cb-bottom cb-wrapper">
                         {!! Form::hidden('callback', 0) !!}
                         <span class="checkboxRed">
                         {!! Form::checkbox('callback', 1, old('callback'), ['class' => 'checkbox-inline', 'id' => 'callbackCh']) !!}
                         <label for="callbackCh"></label>
                         </span>
                         <span class="checkbox-label">I want that you callback me as soon as possible</span>
-                    </label>
+                    </div>
                 </div>
             </div>
 
 
             <div class="subscribe-radio col-md-12">
                 <span class="buttons-label-wrapper">
-                    {!! Form::label('subscribe', 'Want to subscribe our news?', ['class' => 'rb-label']) !!}
+{{--                    {!! Form::label('subscribe', 'Want to subscribe our news?', ['class' => 'rb-label']) !!}--}}
+                    <label class="rb-label">Want to subscribe our news?</label>
                 </span>
                 <span class="buttons-wrapper">
                     <input id="subscribeY" type="radio" name="subscribe" value="1" checked="checked"><label for="subscribeY"><span><span></span></span><b>Yes</b></label>
