@@ -1,0 +1,367 @@
+@red: #dd3331;
+@green: #21991f;
+@light-grey: #dedede;
+@grey-text: #808080;
+@header-black: #393c40;
+@bold-black: #2c2e37;
+@footer-bg: #222222;
+
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #222222;
+  padding:0;
+  margin:0;
+}
+.body-conatiner {
+  background-color: white;
+}
+
+.main-menu-wrapper.navbar-default  {
+  box-shadow: none;
+  font-family: OpenSans, sans-serif;
+  color: @header-black;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  border-bottom: 1px solid @footer-bg;
+  background-image: url(img/red_logo.png);
+  background-repeat: no-repeat;
+  background-position: 50px 15px;
+  padding-left: 200px;
+  min-height: 100px;
+  background-color: white;
+  .container-fluid {
+    background-color: inherit;
+    margin-top: 25px;
+  }
+  .navbar-brand {
+    font-size: 16px;
+    color: @header-black;
+    font-weight: 600;
+  }
+  .navbar-brand:hover {
+    color: inherit;
+  }
+  .navbar-nav {
+    font-weight: 800;
+    font-size: 12px;
+    li {
+      a {
+        color: @header-black;
+        padding: 15px 12px;
+      }
+    }
+  }
+}
+
+.footer-menu-wrapper.navbar-default {
+  box-shadow: none;
+  font-family: OpenSans, sans-serif;
+  color: white;
+  margin: 0;
+  background-image: url(img/grey_logo.png);
+  background-repeat: no-repeat;
+  background-position: 50px 15px;
+  padding-left: 200px;
+  min-height: 100px;
+  background-color: @footer-bg;
+  border: none;
+  border-radius: 0;
+  .navbar-brand {
+    color: white;
+    font-size: 13px;
+  }
+  .container-fluid {
+    margin-top: 25px;
+  }
+  .navbar-nav {
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    li {
+      padding: 0 22px;
+      a {
+        padding: 15px 0 2px 0;
+        color: #737373;
+      }
+      a:hover {
+        border-bottom: 3px solid @red;
+        color: white;
+      }
+    }
+  }
+}
+
+.body-conatiner {
+  .slider {
+    padding-left: 0;
+    padding-right: 0;
+    position: relative;
+    .lazyOwl {
+      background-size: cover;
+    }
+    .offer-label {
+      position: absolute;
+      top: 30%;
+      color: white;
+      text-transform: uppercase;
+      font-weight: 800;
+      font-size: 50px;
+      width: calc(~'100% - 15px');
+      text-align: center;
+      z-index: 1;
+    }
+    .slide-wrapper {
+      position: relative;
+      .slide-text-wrapper {
+        position: absolute;
+        top: 43%;
+        color: white;
+        font-size: 24px;
+        width: calc(~'100% - 15px');
+        text-align: center;
+        max-height: 19%;
+        overflow: hidden;
+        .slide-title-text {
+          display: block;
+          margin: auto;
+          width: 61%;
+          font-weight: 300;
+        }
+      }
+      .slider-button {
+        position: absolute;
+        top: 66%;
+        width: calc(~'100% - 15px');
+        text-align: center;
+        a {
+          background-color: @red;
+          padding: 10px 40px;
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase;
+          font-size: 16px;
+          font-weight: bold;
+        }
+      }
+    }
+    .owl-controls {
+      position: absolute;
+      right: 23px;
+      top: 45%;
+      .owl-page {
+        display: block;
+        span {
+          background-color: transparent;
+          border: 2px solid white;
+          width: 14px;
+          height: 14px;
+        }
+        margin-bottom: 11px;
+      }
+      .owl-page.active {
+        span {
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+.form-horizontal,
+.front-form-wrapper {
+  margin-bottom: 25px;
+  .front-title {
+    font-weight: 900;
+    color: @bold-black;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding-top: 80px;
+    padding-bottom: 45px;
+    background-image: url(img/waves.png);
+    background-repeat: no-repeat;
+    background-position: 50% 40px;
+  }
+  .subscription-form {
+    padding: 0 35px;
+  }
+  label {
+    color: @bold-black;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+  }
+  input,
+  select,
+  textarea {
+    border: 2px solid @light-grey;
+    color: @grey-text;
+    border-radius: 0;
+  }
+  textarea {
+    padding: 20px;
+    resize: none;
+  }
+  .form-control:focus {
+    border-color: @green;
+  }
+
+  .budget-wrapper select.budget-select {
+    appearance:none;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  .budget-wrapper select.budget-select {
+    background-image: url(img/dropdown.png);
+    background-repeat: no-repeat;
+    background-position: 97%;
+  }
+
+  .message-wrapper {
+    margin-bottom: 25px;
+    textarea {
+      height: 120px;
+    }
+  }
+
+  .privacy-protected {
+    text-align: right;
+    .privacy-lock {
+      color: @green;
+      background-image: url(img/lock.png);
+      background-repeat: no-repeat;
+      font-size: 13px;
+      padding: 5px 0 5px 27px;
+      background-position: 0 2px;
+      font-weight: bold;
+    }
+  }
+  .subscribe-radio,
+  .down-part {
+    label {
+      text-transform: none;
+      color: @grey-text;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+  .checkbox-wrapper {
+    margin: 0;
+    .checkbox-label {
+      margin-left: 15px;
+      vertical-align: middle;
+      a {
+        color: inherit;
+      }
+    }
+    .checkbox-label.error-item {
+      border-bottom: 1px solid @red;
+    }
+  }
+
+  .subscribe-radio {
+    margin-top: 20px;
+    .rb-label {
+      padding-right: 15px;
+    }
+    label {
+      cursor: pointer;
+      vertical-align: middle;
+      span {
+        cursor: pointer;
+      }
+      b {
+        display: inline-block;
+        vertical-align: super;
+        padding: 0 5px;
+      }
+    }
+  }
+
+  .inline-error {
+    margin: 5px 0 0 0;
+    color: @red;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .error-item {
+    border-color: @red;
+  }
+
+  .btn {
+    background-color: @red;
+    border: none;
+    outline: none;
+    padding: 10px 50px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 25px;
+  }
+  .login-btn-wrapper {
+    margin-top: 10px;
+  }
+  .btn-login {
+    border-radius: 0;
+    margin-top: 0;
+  }
+  .btn-link {
+    margin-top: 15px;
+  }
+}
+
+
+.body-white,
+.body-404 {
+  background-color: white;
+  .wrapper-404 {
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .main-menu-wrapper.navbar-default  {
+    background-image: url(img/red_logo_small.png);
+    background-repeat: no-repeat;
+    background-position: 5px 15px;
+    padding-left: 55px;
+    .navbar-brand {
+      font-size: 14px;
+      width: 70%;
+    }
+    .container-fluid {
+      margin-top: 0;
+    }
+  }
+  .front-form-wrapper {
+    .subscription-form {
+      padding: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-menu-wrapper.navbar-default  {
+    .navbar-brand {
+      font-size: 12px;
+    }
+  }
+  .front-form-wrapper {
+    .privacy-protected {
+      margin-bottom: 15px;
+    }
+    .buttons-wrapper {
+      display: block;
+    }
+  }
+}

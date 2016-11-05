@@ -1,0 +1,53 @@
+body.dragging,
+body.dragging * {
+    cursor: move !important;
+}
+
+.dragged {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2000;
+}
+
+ul#sortable li.placeholder {
+    position: relative;
+    /** More li styles **/
+}
+ul#sortable li.placeholder:before {
+    position: absolute;
+    /** Define arrowhead **/
+}
+.inner-div .menu-text {
+    width: 35%;
+    display: inline-block;
+}
+.inner-div .btn {
+    margin-right:5px;
+}
+.inner-div .menu-check {
+    display: inline-block;
+    width: 20px;
+    vertical-align: middle;
+    box-shadow: none;
+}
+.sortable-sumbenu,
+.ui-sortable {
+    list-style-type: none;
+    padding-left: 0;
+}
+.ui-sortable .ui-state-default {
+    /*cursor: -webkit-grab;*/
+}
+.ui-sortable li {
+    padding-right:0;
+}
+.ui-sortable .inner-div .offset-left {
+    margin-left: 5px;
+}
+.glyphicon-move {
+    cursor: -webkit-grab;
+}
+.ui-sortable ol {
+    list-style-type: none;
+    padding-left: 0;
+}
