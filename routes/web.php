@@ -26,6 +26,7 @@ Route::group(
     ],
     function()
     {
+        Route::get('', 'SliderController@adminIndex');
         Route::post('menu/add', 'MenuController@store');
         Route::get('menu/add', 'MenuController@create');
         Route::patch('menu/{menu}/edit', 'MenuController@update');

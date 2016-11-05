@@ -101,7 +101,7 @@
     <div class="footer-menu-wrapper navbar navbar-default clearfix">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="#">&copy; @php echo date("Y"); @endphp Redwerk. All rights reserved.</a>
+                <a class="navbar-brand" href="/adm">&copy; @php echo date("Y"); @endphp Redwerk. All rights reserved.</a>
             </div>
             <div id="mm-collapse" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
