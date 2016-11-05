@@ -23,6 +23,7 @@
     <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
 
+    <title>Redwerk</title>
     @yield('headerscripts')
 </head>
 <body>
@@ -103,7 +104,7 @@
             <div class="navbar-header">
                 <a class="navbar-brand" href="/adm">&copy; @php echo date("Y"); @endphp Redwerk. All rights reserved.</a>
             </div>
-            <div id="mm-collapse" class="navbar-collapse collapse">
+            <div id="fm-collapse" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     @foreach($menus as $menu)
                         <li class="">
