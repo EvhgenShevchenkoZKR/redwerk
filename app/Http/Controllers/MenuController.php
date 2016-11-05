@@ -8,18 +8,11 @@ use App\Menu;
 
 class MenuController extends Controller
 {
-    protected $mainMenu;
 
-    public function __construct(){
-        $this->middleware('auth');
-        $this->mainMenu = Menu::getPublishedMenuItems();
-    }
 
     public function create(){
 
-        return view('menu.create',[
-            'mainMenu' => $this->mainMenu,
-        ]);
+        return view('menu.create');
     }
 
     public function store(MenuRequest $request){
@@ -35,7 +28,6 @@ class MenuController extends Controller
 
         return view('menu.edit',[
             'menu' => $menu,
-            'mainMenu' => $this->mainMenu,
         ]);
     }
 
@@ -57,10 +49,12 @@ class MenuController extends Controller
 
         return view('menu.admin_index',[
             'main_menus' => $this->buildNestedMenu(),
-            'mainMenu' => $this->mainMenu,
         ]);
     }
 
+    /**
+     * Reordering menu weight via ajax drag end jQuery Nested Sortable
+     */
     public function ajaxReorder(Request $request){
 
         $orderedArray = $this->unserializeNestedString($request->menudata);

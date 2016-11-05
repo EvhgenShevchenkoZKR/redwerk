@@ -11,18 +11,10 @@ use File;
 
 class SliderController extends Controller
 {
-    protected $mainMenu;
-
-    public function __construct(){
-        $this->middleware('auth');
-        $this->mainMenu = Menu::getPublishedMenuItems();
-    }
 
     public function create(){
 
-        return view('slider.create',[
-            'mainMenu' => $this->mainMenu,
-        ]);
+        return view('slider.create');
     }
 
     public function store(SliderRequest $request){
@@ -42,7 +34,6 @@ class SliderController extends Controller
 
         return view('slider.edit',[
             'slider' => $slider,
-            'mainMenu' => $this->mainMenu,
         ]);
     }
 
@@ -60,6 +51,9 @@ class SliderController extends Controller
         return redirect()->back()->with('message', 'Success');
     }
 
+    /**
+     * removing folder with image and db record
+     */
     public function remove(Slider $slider){
         $dir = base_path() . "/public/images/slides/$slider->id/";
         File::deleteDirectory($dir);
@@ -71,10 +65,12 @@ class SliderController extends Controller
 
         return view('slider.admin_index',[
             'sliders' => Slider::orderedSliders(),
-            'mainMenu' => $this->mainMenu,
         ]);
     }
 
+    /**
+     * Reordering sliders weight via ajax drag end jQuery Nested Sortable
+     */
     public function ajaxReorder(Request $request){
 
         $orderedArray = $this->unserializeNestedString($request->menudata);

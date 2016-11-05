@@ -13,12 +13,12 @@ use Illuminate\Support\Facades\Notification;
 
 class SubscriptionController extends Controller
 {
-    protected $mainMenu;
 
-    public function __construct(){
-        $this->mainMenu = Menu::getPublishedMenuItems();
-    }
-
+    /**
+     * Storing new subscription to DB
+     * notifying admin via email that form was subscribed
+     * If users checked callback - we send him email to imitate callback
+     */
     public function store(SubscriptionRequest $request){
 
         $subscription = new Subscription($request->all());
@@ -46,10 +46,13 @@ class SubscriptionController extends Controller
 
         return view('subscription.admin_index',[
             'subscriptions' => Subscription::all(),
-            'mainMenu' => $this->mainMenu,
         ]);
     }
 
+    /**
+     * Callback for mass delivery form - we sending emails for all who subscribed our form
+     * and set subscription to TRUE
+     */
     public function delivery(DeliveryRequest $request){
         $emails = Subscription::getSubscribedMails();
         if(count($emails)){
@@ -63,7 +66,7 @@ class SubscriptionController extends Controller
     }
 
     /**
-     * Imitation of reaction of checked callback option of subscription form
+     * Send mass emails
      */
     private function sendMessage($to, $text){
         $rootUser = User::find(User::$rootId);

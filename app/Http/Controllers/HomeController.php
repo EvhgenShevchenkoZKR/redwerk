@@ -9,28 +9,34 @@ use App\Slider;
 class HomeController extends Controller
 {
 
+    private $menus;
 
-    public function __construct() {
+    private $sliders;
 
+    public function __construct(){
+        $this->menus = Menu::buildMainMenu();
+        $this->sliders = Slider::getPublishedSlides();
     }
-
-
+    /**
+     * Homepage
+     */
     public function index()
     {
-        $menus = Menu::buildMainMenu();
-        $sliders = Slider::getPublishedSlides();
+
         return view('pages.home', [
-            'menus' => $menus,
-            'sliders' => $sliders,
+            'menus' => $this->menus,
+            'sliders' => $this->sliders,
         ]);
     }
 
+    /**
+     * Terms of use page - it`s 100% dummy
+     */
     public function  terms(){
-        $menus = Menu::buildMainMenu();
-        $sliders = Slider::getPublishedSlides();
+
         return view('pages.terms', [
-            'menus' => $menus,
-            'sliders' => $sliders,
+            'menus' => $this->menus,
+            'sliders' => $this->sliders,
         ]);
     }
 
