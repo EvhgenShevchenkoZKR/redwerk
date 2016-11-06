@@ -4,6 +4,14 @@ body {
   padding: 0;
   margin: 0;
 }
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+}
 .body-conatiner {
   background-color: white;
 }
@@ -193,9 +201,17 @@ body {
   padding: 20px;
   resize: none;
 }
+.form-horizontal .form-control,
+.front-form-wrapper .form-control {
+  border-color: #dedede;
+}
 .form-horizontal .form-control:focus,
 .front-form-wrapper .form-control:focus {
-  border-color: #21991f;
+  border-color: #dedede;
+}
+.form-horizontal .buttons-wrapper input,
+.front-form-wrapper .buttons-wrapper input {
+  cursor: pointer;
 }
 .form-horizontal .budget-wrapper select.budget-select,
 .front-form-wrapper .budget-wrapper select.budget-select {
@@ -311,6 +327,10 @@ body {
 }
 .form-horizontal .error-item,
 .front-form-wrapper .error-item {
+  border-color: #dd3331;
+}
+.form-horizontal .form-control.error-item:focus,
+.front-form-wrapper .form-control.error-item:focus {
   border-color: #dd3331;
 }
 .form-horizontal .btn,

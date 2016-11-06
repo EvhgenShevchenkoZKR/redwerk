@@ -13,6 +13,15 @@ body {
   padding:0;
   margin:0;
 }
+
+.btn.active.focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn:active:focus,
+.btn:focus {
+  outline: none;
+}
 .body-conatiner {
   background-color: white;
 }
@@ -203,8 +212,16 @@ body {
     padding: 20px;
     resize: none;
   }
+  .form-control {
+    border-color: @light-grey;
+  }
   .form-control:focus {
-    border-color: @green;
+    border-color: @light-grey;
+  }
+  .buttons-wrapper {
+    input {
+      cursor: pointer;
+    }
   }
 
   .budget-wrapper select.budget-select {
@@ -276,8 +293,6 @@ body {
     }
   }
 
-
-
   .subscribe-radio {
     margin-top: 20px;
     .rb-label {
@@ -307,6 +322,9 @@ body {
   }
 
   .error-item {
+    border-color: @red;
+  }
+  .form-control.error-item:focus {
     border-color: @red;
   }
 

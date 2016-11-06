@@ -12,6 +12,9 @@
     <script src="/packages/bootstrap/js/bootstrap.min.js"></script>
     {{--Main css files compiled from less via gulp--}}
     <link href="/css/admin.css" rel="stylesheet" type="text/css" >
+    <title>Redwerk</title>
+    <link rel="shortcut icon" href="/images/fav-grey.ico" type="image/x-icon">
+    <link rel="icon" href="/images/fav-grey.ico" type="image/x-icon">
     @yield('headerscripts')
 </head>
 <body>
@@ -37,6 +40,11 @@
     <div class="admin-menu col-md-3">
         <h2 class="">Admin menu</h2>
         <ul class="nav nav-pills nav-stacked">
+            <li>
+                {!! Form::open(['url' => "/logout", 'method' => 'POST', 'class' => 'logout-link']) !!}
+                {!! Form::submit(trans('Logout'), ['class' => 'logout']) !!}
+                {!! Form::close() !!}
+            </li>
             <li><a href="/adm/sliders">Sliders</a></li>
             <li><a href="/adm/slider/add">Create slide</a></li>
             <li><a href="/adm/menus">Main menu</a></li>

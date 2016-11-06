@@ -88,5 +88,22 @@ ul#subscriptions {
   margin: 0;
   list-style-type: none;
 }
+.logout-link {
+  margin: 0;
+}
+.logout-link .logout {
+  background: none;
+  border: none;
+  color: #337ab7;
+  display: block;
+  padding: 10px 15px;
+  float: none;
+  width: 100%;
+  text-align: left;
+}
+.logout-link .logout:hover {
+  text-decoration: none;
+  background-color: #eee;
+}
 
 /*# sourceMappingURL=admin.css.map */
